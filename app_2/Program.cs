@@ -3,18 +3,23 @@
     class Program
     {
         static void Main(string[] args)
-        {
-            Console.WriteLine(Quantity(12));
+        {   
+            Console.Write($"Введите число: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write($"Количество цифр в числе: ");
+            Console.WriteLine(Quantity( number ));
+
         }
 
+        // возвращает количество чисел
         static int Quantity(int number)
         {   
-            int res = 0;
             int count = 0;
 
-            while (number != 0)
+            while (number > 0)
             {   
-                res =number / 10;
+                number = number / 10;
                 count++;
             }
 
