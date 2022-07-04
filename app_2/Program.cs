@@ -17,10 +17,17 @@
         {   
             int count = 0;
 
-            while (number > 0)
-            {   
-                number = number / 10;
-                count++;
+            if( Math.Abs( number ) == 0)
+            {
+                 count = 1;
+            }
+            else
+            {
+                 while ( Math.Abs( number ) != 0)
+                 {   
+                    number = number / 10;
+                    count++;
+                 }
             }
 
             return count;

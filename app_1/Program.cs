@@ -33,8 +33,10 @@ namespace App_1
         }
 
         static int GetSumRecursion( int number )
-        {
-            return number = number <= 1 ? 1 : number + GetSumRecursion( number - 1 );            
+        {   
+            int result = 0;
+
+            return result = number <= 0 ? result : number + GetSumRecursion( number - 1 );            
         }
     }
 }
