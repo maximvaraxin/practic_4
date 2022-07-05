@@ -20,6 +20,7 @@ namespace App_1
            Console.WriteLine($" Сумма чисел диапазона ( решение рекурсией ) = { GetSumRecursion( number ) }");
         }
 
+        // возвращает сумму чисел
         static int GetSum( int num )
         {   
             int result = 0;
@@ -32,6 +33,7 @@ namespace App_1
             return result;
         }
 
+        // возвращает сумму чисел(рекурсия)  
         static int GetSumRecursion( int number )
         {   
             int result = 0;

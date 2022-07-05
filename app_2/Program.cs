@@ -12,8 +12,8 @@
 
         }
 
-        // возвращает количество чисел
-        static int Quantity(int number)
+        // возвращает количество цифр числа
+        static int Quantity( int number )
         {   
             int count = 0;
 
