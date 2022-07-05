@@ -5,32 +5,42 @@
  * 9012 -> 12 
  */
 
-namespace App_3
+namespace App_6
 {
     class Program
     {
         static void Main(string[] args)
         {   
-           Console.Write($" Введите основание: ");
-           double num_1 = Convert.ToInt32(Console.ReadLine());
+           Console.Write($" Введите число: ");
+           int num = Convert.ToInt32(Console.ReadLine());
 
-           Console.Write($" Введите показатель степени: ");
-           double num_2 = Convert.ToInt32(Console.ReadLine());
-           
-           
-           Console.WriteLine($" { num_1 } в степени { num_2 } = { Pow( num_1, num_2 ) }");
+           Console.WriteLine($" Сумма цифр числа { num } = { GetSum( num ) }");
+           Console.WriteLine($" Сумма цифр числа(решение рекурсией) { num } = { GetSumRecursion( num ) }");
         }
 
-        // возвращает возведение в степень
-        static double Pow( double num_1, double num_2 )
+        // возвращает сумму цифр в числе(рекурсия)
+        static int GetSumRecursion( int number )
         {   
-            double result = 1;
 
-            for (int i = 0; i < num_2; i++)
+            if ( number < 10 )
 			{
-                result = result * num_1;
+                return number;
 			}
-            
+
+            return number % 10 + GetSumRecursion( number / 10 );
+        }
+
+        // возвращает сумму цифр в числе
+        static int GetSum( int number)
+        {
+            int result = 0;
+
+            while( number > 0 )
+            {
+                result = result + number % 10;
+                number = number / 10;
+            }
+
             return result;
         }
     }
